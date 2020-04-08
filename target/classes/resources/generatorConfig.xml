@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<classPathEntry
+		location="C:/Users/zhh/.m2/repository/postgresql/postgresql/9.1-901.jdbc4/postgresql-9.1-901.jdbc4.jar" />
+	<context id="context1">
+	
+		<jdbcConnection connectionURL="jdbc:postgresql://127.0.0.1:5432/demoDB"
+			driverClass="org.postgresql.Driver" password="123456" userId="demoDB" />
+			
+		<javaModelGenerator targetPackage="com.javen.model"
+			targetProject="mybatis" />
+			
+		<sqlMapGenerator targetPackage="com.javen.mapping"
+			targetProject="mybatis" />
+			
+		<javaClientGenerator targetPackage="com.javen.dao"
+			targetProject="mybatis" type="XMLMAPPER" />
+			
+		<table schema="public" tableName="%">
+			<property name="ignoreQualifiersAtRuntime" value="true" />
+		</table>
+		
+	</context>
+</generatorConfiguration>
